@@ -1,0 +1,289 @@
+{
+  "total_images": {
+    "train": 6894,
+    "test": 2284
+  },
+  "expected_images": {
+    "train": 6894,
+    "test": 2284
+  },
+  "count_differences": {
+    "train": 0,
+    "test": 0
+  },
+  "class_count": 13,
+  "class_to_idx": {
+    "apple": 0,
+    "binder": 1,
+    "coffee_mug": 2,
+    "dry_battery": 3,
+    "greens": 4,
+    "kleenex": 5,
+    "lightbulb": 6,
+    "lime": 7,
+    "mushroom": 8,
+    "notebook": 9,
+    "pitcher": 10,
+    "sponge": 11,
+    "water_bottle": 12
+  },
+  "per_class_counts": {
+    "train": {
+      "apple": 503,
+      "binder": 283,
+      "coffee_mug": 759,
+      "dry_battery": 418,
+      "greens": 430,
+      "kleenex": 614,
+      "lightbulb": 370,
+      "lime": 379,
+      "mushroom": 302,
+      "notebook": 284,
+      "pitcher": 223,
+      "sponge": 1401,
+      "water_bottle": 928
+    },
+    "test": {
+      "apple": 122,
+      "binder": 143,
+      "coffee_mug": 223,
+      "dry_battery": 226,
+      "greens": 146,
+      "kleenex": 156,
+      "lightbulb": 124,
+      "lime": 127,
+      "mushroom": 156,
+      "notebook": 156,
+      "pitcher": 114,
+      "sponge": 370,
+      "water_bottle": 221
+    }
+  },
+  "per_instance_counts": {
+    "train": {
+      "apple": {
+        "apple_2": 126,
+        "apple_3": 123,
+        "apple_4": 127,
+        "apple_5": 127
+      },
+      "binder": {
+        "binder_2": 139,
+        "binder_3": 144
+      },
+      "coffee_mug": {
+        "coffee_mug_3": 112,
+        "coffee_mug_4": 109,
+        "coffee_mug_5": 108,
+        "coffee_mug_6": 110,
+        "coffee_mug_7": 162,
+        "coffee_mug_8": 158
+      },
+      "dry_battery": {
+        "dry_battery_3": 106,
+        "dry_battery_4": 113,
+        "dry_battery_5": 99,
+        "dry_battery_6": 100
+      },
+      "greens": {
+        "greens_2": 133,
+        "greens_3": 145,
+        "greens_4": 152
+      },
+      "kleenex": {
+        "kleenex_2": 157,
+        "kleenex_3": 163,
+        "kleenex_4": 130,
+        "kleenex_5": 164
+      },
+      "lightbulb": {
+        "lightbulb_2": 117,
+        "lightbulb_3": 125,
+        "lightbulb_4": 128
+      },
+      "lime": {
+        "lime_2": 129,
+        "lime_3": 121,
+        "lime_4": 129
+      },
+      "mushroom": {
+        "mushroom_2": 153,
+        "mushroom_3": 149
+      },
+      "notebook": {
+        "notebook_3": 163,
+        "notebook_5": 121
+      },
+      "pitcher": {
+        "pitcher_2": 111,
+        "pitcher_3": 112
+      },
+      "sponge": {
+        "sponge_4": 127,
+        "sponge_5": 161,
+        "sponge_6": 162,
+        "sponge_7": 155,
+        "sponge_8": 162,
+        "sponge_9": 161,
+        "sponge_10": 159,
+        "sponge_11": 157,
+        "sponge_12": 157
+      },
+      "water_bottle": {
+        "water_bottle_3": 114,
+        "water_bottle_4": 113,
+        "water_bottle_5": 114,
+        "water_bottle_6": 118,
+        "water_bottle_7": 155,
+        "water_bottle_9": 156,
+        "water_bottle_10": 158
+      }
+    },
+    "test": {
+      "apple": {
+        "apple_1": 122
+      },
+      "binder": {
+        "binder_1": 143
+      },
+      "coffee_mug": {
+        "coffee_mug_1": 111,
+        "coffee_mug_2": 112
+      },
+      "dry_battery": {
+        "dry_battery_1": 115,
+        "dry_battery_2": 111
+      },
+      "greens": {
+        "greens_1": 146
+      },
+      "kleenex": {
+        "kleenex_1": 156
+      },
+      "lightbulb": {
+        "lightbulb_1": 124
+      },
+      "lime": {
+        "lime_1": 127
+      },
+      "mushroom": {
+        "mushroom_1": 156
+      },
+      "notebook": {
+        "notebook_2": 156
+      },
+      "pitcher": {
+        "pitcher_1": 114
+      },
+      "sponge": {
+        "sponge_1": 128,
+        "sponge_2": 118,
+        "sponge_3": 124
+      },
+      "water_bottle": {
+        "water_bottle_1": 113,
+        "water_bottle_2": 108
+      }
+    }
+  },
+  "split_width": {
+    "train": {
+      "min": 27,
+      "max": 328,
+      "mean": 114.4395
+    },
+    "test": {
+      "min": 28,
+      "max": 328,
+      "mean": 115.7106
+    }
+  },
+  "split_height": {
+    "train": {
+      "min": 25,
+      "max": 282,
+      "mean": 109.5345
+    },
+    "test": {
+      "min": 25,
+      "max": 282,
+      "mean": 105.3393
+    }
+  },
+  "class_max_dimensions": {
+    "apple": {
+      "max_width": 90,
+      "max_height": 89
+    },
+    "binder": {
+      "max_width": 328,
+      "max_height": 282
+    },
+    "coffee_mug": {
+      "max_width": 148,
+      "max_height": 129
+    },
+    "dry_battery": {
+      "max_width": 71,
+      "max_height": 63
+    },
+    "greens": {
+      "max_width": 221,
+      "max_height": 168
+    },
+    "kleenex": {
+      "max_width": 233,
+      "max_height": 225
+    },
+    "lightbulb": {
+      "max_width": 107,
+      "max_height": 96
+    },
+    "lime": {
+      "max_width": 76,
+      "max_height": 67
+    },
+    "mushroom": {
+      "max_width": 166,
+      "max_height": 118
+    },
+    "notebook": {
+      "max_width": 279,
+      "max_height": 229
+    },
+    "pitcher": {
+      "max_width": 182,
+      "max_height": 259
+    },
+    "sponge": {
+      "max_width": 130,
+      "max_height": 97
+    },
+    "water_bottle": {
+      "max_width": 111,
+      "max_height": 245
+    }
+  },
+  "broken_images": [],
+  "missing_class_dirs": [],
+  "missing_instance_dirs": [],
+  "duplicate_image_paths": [],
+  "overlapping_instances": [],
+  "overlapping_image_paths": [],
+  "image_path_is_relative_to": "dataset.root",
+  "image_filter": {
+    "required_keywords": [
+      "crop"
+    ],
+    "excluded_keywords": [
+      "depth",
+      "mask"
+    ],
+    "extensions": [
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".bmp"
+    ]
+  }
+}

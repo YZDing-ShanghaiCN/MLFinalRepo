@@ -1,0 +1,12 @@
+**pycache**/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.env
+outputs/checkpoints/
+outputs/logs/
+*.pth
+*.pt
+*.ckpt

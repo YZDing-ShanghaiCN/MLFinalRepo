@@ -1,0 +1,98 @@
+train:
+  apple:
+    - apple_2
+    - apple_3
+    - apple_4
+    - apple_5
+  binder:
+    - binder_2
+    - binder_3
+  coffee_mug:
+    - coffee_mug_3
+    - coffee_mug_4
+    - coffee_mug_5
+    - coffee_mug_6
+    - coffee_mug_7
+    - coffee_mug_8
+  dry_battery:
+    - dry_battery_3
+    - dry_battery_4
+    - dry_battery_5
+    - dry_battery_6
+  greens:
+    - greens_2
+    - greens_3
+    - greens_4
+  kleenex:
+    - kleenex_2
+    - kleenex_3
+    - kleenex_4
+    - kleenex_5
+  lightbulb:
+    - lightbulb_2
+    - lightbulb_3
+    - lightbulb_4
+  lime:
+    - lime_2
+    - lime_3
+    - lime_4
+  mushroom:
+    - mushroom_2
+    - mushroom_3
+  notebook:
+    - notebook_3
+    - notebook_5
+  pitcher:
+    - pitcher_2
+    - pitcher_3
+  sponge:
+    - sponge_4
+    - sponge_5
+    - sponge_6
+    - sponge_7
+    - sponge_8
+    - sponge_9
+    - sponge_10
+    - sponge_11
+    - sponge_12
+  water_bottle:
+    - water_bottle_3
+    - water_bottle_4
+    - water_bottle_5
+    - water_bottle_6
+    - water_bottle_7
+    - water_bottle_9
+    - water_bottle_10
+
+test:
+  apple:
+    - apple_1
+  binder:
+    - binder_1
+  coffee_mug:
+    - coffee_mug_1
+    - coffee_mug_2
+  dry_battery:
+    - dry_battery_1
+    - dry_battery_2
+  greens:
+    - greens_1
+  kleenex:
+    - kleenex_1
+  lightbulb:
+    - lightbulb_1
+  lime:
+    - lime_1
+  mushroom:
+    - mushroom_1
+  notebook:
+    - notebook_2
+  pitcher:
+    - pitcher_1
+  sponge:
+    - sponge_1
+    - sponge_2
+    - sponge_3
+  water_bottle:
+    - water_bottle_1
+    - water_bottle_2

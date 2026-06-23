@@ -1,0 +1,23 @@
+Device: cpu
+Train samples: 5095
+Val samples: 1799
+Epoch 01/2
+Train loss: 0.935461
+Train accuracy: 0.887144
+Train macro F1: 0.854388
+Val loss: 1.785390
+Val accuracy: 0.553641
+Val macro F1: 0.458433
+Learning rate: 0.00100000
+Best val macro F1: 0.458433
+Early stopping counter: 0
+Epoch 02/2
+Train loss: 0.705429
+Train accuracy: 0.972718
+Train macro F1: 0.964092
+Val loss: 1.809730
+Val accuracy: 0.547526
+Val macro F1: 0.473701
+Learning rate: 0.00100000
+Best val macro F1: 0.473701
+Early stopping counter: 0

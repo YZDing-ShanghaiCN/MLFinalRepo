@@ -1,0 +1,24 @@
+model:
+  name: baseline_cnn_gap
+  input_channels: 3
+  num_classes: 13
+
+backbone:
+  stage_channels:
+    - 32
+    - 64
+    - 128
+  convs_per_stage: 2
+  kernel_size: 3
+  use_batch_norm: true
+  activation: relu
+  pooling: maxpool
+
+global_pool:
+  type: adaptive_avg
+  output_size: 1
+
+classifier:
+  hidden_dim: 128
+  dropout: 0.3
+  use_batch_norm: true

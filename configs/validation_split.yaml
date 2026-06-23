@@ -1,0 +1,27 @@
+val_instances:
+  apple:
+    - apple_5
+  binder:
+    - binder_3
+  coffee_mug:
+    - coffee_mug_8
+  dry_battery:
+    - dry_battery_6
+  greens:
+    - greens_4
+  kleenex:
+    - kleenex_5
+  lightbulb:
+    - lightbulb_4
+  lime:
+    - lime_4
+  mushroom:
+    - mushroom_3
+  notebook:
+    - notebook_5
+  pitcher:
+    - pitcher_3
+  sponge:
+    - sponge_12
+  water_bottle:
+    - water_bottle_10

@@ -1,0 +1,15 @@
+{
+  "apple": 0,
+  "binder": 1,
+  "coffee_mug": 2,
+  "dry_battery": 3,
+  "greens": 4,
+  "kleenex": 5,
+  "lightbulb": 6,
+  "lime": 7,
+  "mushroom": 8,
+  "notebook": 9,
+  "pitcher": 10,
+  "sponge": 11,
+  "water_bottle": 12
+}
