@@ -9,12 +9,25 @@ def project_root() -> Path:
 
 
 def resolve_project_path(path_value: str | Path, root: Path | None = None) -> Path:
-    """Resolve a path relative to the project root unless it is absolute."""
+    """Resolve a path relative to the project root unless it is absolute.
+
+    Existing paths are also accepted relative to the current working directory
+    so scripts can be launched from the repository parent with paths such as
+    ``ml_repo/configs/train.yaml``.
+    """
     path = Path(path_value)
     if path.is_absolute():
         return path.resolve()
     base = project_root() if root is None else root
-    return (base / path).resolve()
+    project_candidate = (base / path).resolve()
+    if project_candidate.exists() or root is not None:
+        return project_candidate
+    cwd_candidate = path.resolve()
+    if cwd_candidate.exists():
+        return cwd_candidate
+    if path.parts and path.parts[0] == base.name:
+        return (base.parent / path).resolve()
+    return project_candidate
 
 
 def relative_to_project(path: Path, root: Path | None = None) -> str:

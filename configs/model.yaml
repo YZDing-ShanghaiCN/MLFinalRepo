@@ -20,5 +20,5 @@ global_pool:
 
 classifier:
   hidden_dim: 128
-  dropout: 0.3
+  dropout: 0.3  # 0.3 or 0.5
   use_batch_norm: true
