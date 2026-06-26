@@ -1,0 +1,24 @@
+experiment:
+  name: flatten_dropout
+  output_dir: output/ablation/flatten_dropout
+  seed: 42
+
+base_configs:
+  train: configs/train.yaml
+  model: configs/model.yaml
+  dataset: configs/dataset.yaml
+  validation_split: configs/validation_split.yaml
+
+model:
+  pooling_type: flatten
+  dropout: 0.3
+
+training:
+  learning_rate: 0.004
+  batch_size: 32
+  epochs: 30
+
+data:
+  train_manifest: metadata/manifests/train_sub.csv
+  val_manifest: metadata/manifests/val.csv
+  class_mapping: metadata/class_to_idx.json
