@@ -1,0 +1,34 @@
+experiment:
+  name: baseline_gap_dropout
+  result_dir: ../results/test/baseline_gap_dropout
+
+checkpoint:
+  type: best_model
+  path: ../outputs/ablation/baseline_gap_dropout/best_model.pt
+
+model:
+  pooling_type: gap
+  dropout: 0.3
+  expected_parameter_count: 305901
+
+training_reference:
+  learning_rate: 0.004
+  batch_size: 32
+  epochs: 30
+  seed: 42
+  best_epoch: 13
+  best_train_accuracy: 0.9994111874386653
+  best_val_accuracy: 0.6503613118399111
+  best_val_loss: 1.600681179957366
+  best_val_macro_f1: 0.5570941208010332
+
+data:
+  test_manifest: metadata/manifests/test.csv
+  class_mapping: metadata/class_to_idx.json
+  dataset_config: configs/dataset.yaml
+
+evaluation:
+  batch_size: 32
+  num_workers: 0
+  pin_memory: false
+  shuffle: false
