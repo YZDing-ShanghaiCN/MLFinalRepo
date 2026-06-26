@@ -62,6 +62,26 @@ pip install -r .\ml_repo\requirements.txt
 
 依赖包括 PyTorch、Pillow、PyYAML、matplotlib、pytest、numpy 和 scikit-learn。
 
+## Figures
+
+以下图片位于 `ml_repo/results/`，用于快速说明数据、模型结构和实验结果。
+
+**Figure 1. CNN-GAP baseline overview**
+
+![CNN-GAP baseline overview](results/fig1.png)
+
+**Figure 2. Dataset split and preprocessing overview**
+
+![Dataset split and preprocessing overview](results/fig2.png)
+
+**Figure 3. Detailed model architecture**
+
+![Detailed model architecture](results/fig3.png)
+
+**Figure 4. Experiment summary and validation analysis**
+
+![Experiment summary and validation analysis](results/fig4.png)
+
 ## Dataset
 
 默认数据根目录在 [configs/dataset.yaml](configs/dataset.yaml) 中配置：
@@ -352,4 +372,3 @@ python -m pytest .\ml_repo\tests -v
 - 消融实验只使用 `train_sub.csv` 和 `val.csv`。
 - 独立测试评估只使用 `test.csv`，且只加载选定好的 `best_model.pt`。
 - 大型运行结果建议保存在项目父目录的 `outputs/` 和 `results/` 中，不提交到代码仓库。
-
