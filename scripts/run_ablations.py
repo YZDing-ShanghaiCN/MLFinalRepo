@@ -23,12 +23,12 @@ EXPERIMENT_CONFIGS = [
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run all ablation experiments in a fixed order.")
-    parser.add_argument("--force", action="store_true", help="Rerun completed experiments inside output/ablation only.")
+    parser.add_argument("--force", action="store_true", help="Rerun completed experiments inside ../outputs/ablation only.")
     return parser.parse_args()
 
 
 def ablation_root() -> Path:
-    return project_root() / "output" / "ablation"
+    return (project_root().parent / "outputs" / "ablation").resolve()
 
 
 def is_relative_to(path: Path, parent: Path) -> bool:

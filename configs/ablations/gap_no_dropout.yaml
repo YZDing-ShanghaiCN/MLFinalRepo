@@ -1,6 +1,6 @@
 experiment:
   name: gap_no_dropout
-  output_dir: output/ablation/gap_no_dropout
+  output_dir: ../outputs/ablation/gap_no_dropout
   seed: 42
 
 base_configs:

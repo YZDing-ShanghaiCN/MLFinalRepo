@@ -56,7 +56,7 @@ def _is_relative_to(path: Path, parent: Path) -> bool:
 
 
 def _ablation_root() -> Path:
-    return project_root() / "output" / "ablation"
+    return (project_root().parent / "outputs" / "ablation").resolve()
 
 
 def _log(message: str, log_file: Path) -> None:
@@ -68,7 +68,16 @@ def _log(message: str, log_file: Path) -> None:
 def _write_history(path: Path, history: list[dict[str, Any]]) -> None:
     if not history:
         return
-    fieldnames = ["epoch", "learning_rate", "train_loss", "train_accuracy", "val_loss", "val_accuracy"]
+    fieldnames = [
+        "epoch",
+        "learning_rate",
+        "train_loss",
+        "train_accuracy",
+        "train_macro_f1",
+        "val_loss",
+        "val_accuracy",
+        "val_macro_f1",
+    ]
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
@@ -292,6 +301,8 @@ def train_ablation(config_path: str | Path) -> dict[str, Any]:
     best_val_loss = float("inf")
     best_train_accuracy = 0.0
     best_train_loss = 0.0
+    best_val_macro_f1 = 0.0
+    best_train_macro_f1 = 0.0
     start_time = time.perf_counter()
 
     _log(f"Experiment: {train_config['experiment']['name']}", log_file)
@@ -322,15 +333,19 @@ def train_ablation(config_path: str | Path) -> dict[str, Any]:
 
         train_loss = float(train_metrics["loss"])
         train_accuracy = float(train_metrics["accuracy"])
+        train_macro_f1 = float(train_metrics["macro_f1"])
         val_loss = float(val_metrics["loss"])
         val_accuracy = float(val_metrics["accuracy"])
+        val_macro_f1 = float(val_metrics["macro_f1"])
         row = {
             "epoch": epoch,
             "learning_rate": current_lr,
             "train_loss": train_loss,
             "train_accuracy": train_accuracy,
+            "train_macro_f1": train_macro_f1,
             "val_loss": val_loss,
             "val_accuracy": val_accuracy,
+            "val_macro_f1": val_macro_f1,
         }
         history.append(row)
         _write_history(output_dir / "history.csv", history)
@@ -341,6 +356,8 @@ def train_ablation(config_path: str | Path) -> dict[str, Any]:
             best_val_loss = val_loss
             best_train_accuracy = train_accuracy
             best_train_loss = train_loss
+            best_val_macro_f1 = val_macro_f1
+            best_train_macro_f1 = train_macro_f1
             save_checkpoint(
                 output_dir / "best_model.pt",
                 epoch=epoch,
@@ -373,8 +390,10 @@ def train_ablation(config_path: str | Path) -> dict[str, Any]:
                 f"lr={current_lr:.8f} "
                 f"train_loss={train_loss:.6f} "
                 f"train_acc={train_accuracy:.6f} "
+                f"train_macro_f1={train_macro_f1:.6f} "
                 f"val_loss={val_loss:.6f} "
                 f"val_acc={val_accuracy:.6f} "
+                f"val_macro_f1={val_macro_f1:.6f} "
                 f"best_val_acc={best_val_accuracy:.6f}"
             ),
             log_file,
@@ -394,12 +413,16 @@ def train_ablation(config_path: str | Path) -> dict[str, Any]:
         "best_epoch": int(best_epoch),
         "best_val_accuracy": float(best_val_accuracy),
         "best_val_loss": float(best_val_loss),
+        "best_val_macro_f1": float(best_val_macro_f1),
         "best_epoch_train_accuracy": float(best_train_accuracy),
         "best_epoch_train_loss": float(best_train_loss),
+        "best_epoch_train_macro_f1": float(best_train_macro_f1),
         "final_epoch_train_accuracy": float(final_row["train_accuracy"]),
         "final_epoch_train_loss": float(final_row["train_loss"]),
+        "final_epoch_train_macro_f1": float(final_row["train_macro_f1"]),
         "final_epoch_val_accuracy": float(final_row["val_accuracy"]),
         "final_epoch_val_loss": float(final_row["val_loss"]),
+        "final_epoch_val_macro_f1": float(final_row["val_macro_f1"]),
         "training_time_seconds": float(round(elapsed, 4)),
         "status": "completed",
     }

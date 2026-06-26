@@ -1,6 +1,6 @@
 experiment:
   name: flatten_dropout
-  output_dir: output/ablation/flatten_dropout
+  output_dir: ../outputs/ablation/flatten_dropout
   seed: 42
 
 base_configs:

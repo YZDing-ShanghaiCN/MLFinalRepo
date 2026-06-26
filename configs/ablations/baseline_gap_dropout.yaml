@@ -1,6 +1,6 @@
 experiment:
   name: baseline_gap_dropout
-  output_dir: output/ablation/baseline_gap_dropout
+  output_dir: ../outputs/ablation/baseline_gap_dropout
   seed: 42
 
 base_configs:

@@ -83,7 +83,7 @@ def test_ablation_yaml_configs_load_and_match_required_training_values() -> None
         assert config["training"]["epochs"] == 30
         assert float(config["training"]["learning_rate"]) == 0.004
         assert int(config["training"]["batch_size"]) == 32
-        assert str(config["experiment"]["output_dir"]).startswith("output/ablation/")
+        assert str(config["experiment"]["output_dir"]).startswith("../outputs/ablation/")
         assert config["data"]["train_manifest"].endswith("train_sub.csv")
         assert config["data"]["val_manifest"].endswith("val.csv")
         assert not any("test" in key.lower() for key in config["data"])
