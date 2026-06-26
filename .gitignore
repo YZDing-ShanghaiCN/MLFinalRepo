@@ -5,8 +5,12 @@ __pycache__/
 .venv/
 venv/
 .env
+*.log
 outputs/checkpoints/
 outputs/logs/
+output/
+outputs/
+results/
 *.pth
 *.pt
 *.ckpt
