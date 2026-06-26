@@ -10,7 +10,6 @@ outputs/checkpoints/
 outputs/logs/
 output/
 outputs/
-results/
 *.pth
 *.pt
 *.ckpt
